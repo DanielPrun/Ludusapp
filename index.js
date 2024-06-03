@@ -19,7 +19,7 @@ app.use(express.urlencoded({extended: true}));
 
 
 //importem els fixers de rutes
-const rutes_article = require("./routes/Article");
+const rutes_article = require("./routes/article");
 const rutes_user = require("./routes/user");
 const rutes_publi = require("./routes/publication");
 const rutes_follow = require("./routes/follow");
