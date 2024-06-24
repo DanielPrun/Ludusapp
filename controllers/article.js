@@ -32,9 +32,10 @@ const crear = async (req, res) => {
 
 const getArticles = (req, res) => {
     let consulta = Article.find({}).sort({ data: -1 });
-    
-    if (req.params.ultimos) {
-        consulta.limit(3);
+   
+    if (req.query.ultimos) {
+        console.log(req.params);
+        consulta.limit(4);
     }
     
     consulta.then((articles) => {

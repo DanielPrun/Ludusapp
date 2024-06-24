@@ -6,5 +6,6 @@ const check = require("../middlewares/auth");
 
 
 router.get("/exercisis", check.auth, ExerciciContoller.getExercisis);
+router.post("/guardar", check.authEntrenador, ExerciciContoller.guardar);
 
 module.exports = router; 

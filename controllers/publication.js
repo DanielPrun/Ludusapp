@@ -75,7 +75,7 @@ const borrar = (req, res) => {
 
         return res.status(200).json({
             status: "success",
-            article: publiBorrada,
+            publicacio: publiBorrada,
             missatge: "borrar"
         });
 

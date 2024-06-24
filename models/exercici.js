@@ -6,11 +6,12 @@ const ExerciciSchema = Schema({
         type: String,
         required: true
     },
-    equipament: String,
+    equipament: Array,
     descripció: String,
     grupMuscular: String,
-    disciplina: Array,
-    target: Array
+    disciplina: String,
+    target: Array,
+    url: String,
 });
 
 ExerciciSchema.plugin(mongoosePaginate);

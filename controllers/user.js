@@ -193,7 +193,7 @@ const entrenador = (req, res) => {
                 });
             }
 
-            if(perfil.rol == "rol_entrenador"){
+            if(perfil.rol == "rol_entrenador" || perfil.rol == "rol_admin"){
                 return res.status(200).send({
                     status: "success",
                     result: true,
