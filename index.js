@@ -10,7 +10,11 @@ connexio();
 const app = express();
 const puerto = 3900;
 
-app.use(cors());
+const options = {
+    origin: ["http://194.164.76.221", "https://194.164.76.221"]
+}
+
+app.use(cors(options));
 
 //convertir el que m'arribi com a body a objecte js
 app.use(express.json());
@@ -19,7 +23,7 @@ app.use(express.urlencoded({extended: true}));
 
 
 //importem els fixers de rutes
-const rutes_article = require("./routes/Article");
+const rutes_article = require("./routes/article");
 const rutes_user = require("./routes/user");
 const rutes_publi = require("./routes/publication");
 const rutes_follow = require("./routes/follow");
